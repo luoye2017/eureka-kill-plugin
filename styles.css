@@ -1,0 +1,62 @@
+/* Eureka Instance Killer Styles */
+
+.eureka-delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+.eureka-delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.eureka-delete-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.eureka-delete-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.eureka-delete-btn:disabled:hover {
+    background-color: #6c757d;
+    transform: none;
+}
+
+/* 为实例行添加一些样式改进 */
+tr:has(.eureka-delete-btn) {
+    transition: background-color 0.2s ease;
+}
+
+tr:has(.eureka-delete-btn):hover {
+    background-color: #f8f9fa;
+}
+
+/* 删除状态的样式 */
+.eureka-instance-deleting {
+    opacity: 0.6;
+    background-color: #fff3cd;
+}
+
+.eureka-instance-deleted {
+    opacity: 0.4;
+    text-decoration: line-through;
+    background-color: #f8d7da;
+}

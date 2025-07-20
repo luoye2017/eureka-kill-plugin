@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Eureka Instance Killer",
+  "version": "1.0",
+  "description": "为Eureka管理端页面的每个实例添加删除按钮",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8761/*",
+    "http://localhost:8761/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://127.0.0.1:8761/*", "http://localhost:8761/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Eureka Instance Killer"
+  },
+  "icons": {
+    "16": "icon16.svg",
+    "48": "icon48.svg",
+    "128": "icon128.svg"
+  }
+}
