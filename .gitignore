@@ -167,6 +167,7 @@ Desktop.ini
 .factorypath
 .metadata
 .gradle
+.vercel/
 build/
 bin/
 
